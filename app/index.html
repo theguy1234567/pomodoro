@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pomodoro</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="task-container">
+        <h2>Start with a Task</h2>
+        <div class="task-input">
+          <input type="text" id="taskInput" placeholder="your task here" />
+          <button id="addtaskBtn" class="mainbtn">Add task</button>
+        </div>
+        <div id="task-list-container">
+          <!-- tasks will be added here through js -->
+        </div>
+      </div>
+      <div id="pomodoro-container" class="pomodoro-container hidden">
+        <div class="timer">25:00</div>
+        <div class="buttons">
+          <button>start</button>
+          <button>pause</button>
+          <button>restart</button>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
