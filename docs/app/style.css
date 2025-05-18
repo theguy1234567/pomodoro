@@ -1,14 +1,14 @@
 @font-face {
   font-family: bodyFont;
-  src: url(/pomodoro/fonts/Comfortaa-Light.ttf);
+  src: url(/pomodoro/docs/fonts/Comfortaa-Bold.ttf);
 }
 @font-face {
   font-family: MainFont;
-  src: url(/pomodoro/fonts/Sarina-Regular.ttf);
+  src: url(/pomodoro/docs/fonts/Sarina-Regular.ttf);
 }
 @font-face {
   font-family: genFont;
-  src: url(/pomodoro/fonts/Comfortaa-Bold.ttf);
+  src: url(/pomodoro/docs/fonts/Comfortaa-Light.ttf);
 }
 
 * {
@@ -38,7 +38,7 @@ body {
   min-height: 100vh;
   min-width: 100vw;
   background-color: #e7ad99;
-  background-image: url(/pomodoro/bcgs/cartographer.png);
+  background-image: url(/pomodoro/docs/bcgs/cartographer.png);
 
   display: flex;
   justify-content: center;
@@ -169,7 +169,7 @@ body.dark-theme {
 
 body.dark-theme h1 {
   color: #fff;
-  text-shadow: 0 0 10px white, 0 0 20px ;
+  text-shadow: 0 0 10px white, 0 0 20px;
 }
 
 body.dark-theme .mainbtn,
