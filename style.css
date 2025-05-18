@@ -48,7 +48,7 @@ body {
   /* border: 1px solid red; */
 
   backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px); /* for Safari */
+  -webkit-backdrop-filter: blur(10px);
   min-height: 50vh;
   min-width: 50vw;
   /* background-color: #ce796b; */
@@ -161,7 +161,7 @@ body {
   width: 120px;
 }
 
-/* bottom container styling (theme btns etc) */
+
 
 body.dark-theme {
   background-color: #1a1a1a;
@@ -203,7 +203,7 @@ body.dark-theme #pomodoro-timer {
   transition: opacity 1s ease;
 }
 
-/* Optional: smoother body theme transition */
+
 body,
 #pomodoro-timer,
 button,

@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", () => {
       return;
     }
     addTask(taskInputValue, true);
-    taskInput.value = ""; // Clear input after adding
+    taskInput.value = ""; 
   });
 
   function addTask(value, shouldStore = false) {
