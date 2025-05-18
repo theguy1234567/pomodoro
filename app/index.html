@@ -7,8 +7,10 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <h1>Pomodoro</h1>
+
     <div class="container">
-      <div class="task-container">
+      <div id="taskcontainer" class="task-container">
         <h2>Start with a Task</h2>
         <div class="task-input">
           <input type="text" id="taskInput" placeholder="your task here" />
@@ -18,15 +20,24 @@
           <!-- tasks will be added here through js -->
         </div>
       </div>
+
       <div id="pomodoro-container" class="pomodoro-container hidden">
-        <div class="timer">25:00</div>
+        <div id="pomodoro-timer" class="timer">25:00</div>
         <div class="buttons">
-          <button>start</button>
-          <button>pause</button>
-          <button>restart</button>
+          <button class="sidebtn" id="goback">go back</button>
+          <button class="sidebtn" id="start">start</button>
+          <button class="sidebtn" id="pause">pause</button>
+          <button class="sidebtn" id="restart">restart</button>
         </div>
       </div>
     </div>
+    <audio
+      id="zenAudio"
+      src="/pomodoro/music/Arnor(chosic.com).mp3"
+      preload="auto"
+      loop
+    ></audio>
+
     <script src="script.js"></script>
   </body>
 </html>

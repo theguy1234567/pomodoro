@@ -1,17 +1,44 @@
+@font-face {
+  font-family: bodyFont;
+  src: url(/pomodoro/fonts/Comfortaa-Light.ttf);
+}
+@font-face {
+  font-family: MainFont;
+  src: url(/pomodoro/fonts/Sarina-Regular.ttf);
+}
+@font-face {
+  font-family: genFont;
+  src: url(/pomodoro/fonts/Comfortaa-Bold.ttf);
+}
+
 * {
   margin: 0;
   padding: 0;
 }
+h1 {
+  font-size: 300px;
+  font-family: mainFont;
+  position: absolute;
+}
+.visible {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transition: all 0.3s ease-in-out;
+}
 
 .hidden {
-  display: none;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: all 0.3s ease-in-out;
 }
 
 body {
   min-height: 100vh;
   min-width: 100vw;
   background-color: #e7ad99;
-  background-image: url(bcgs/arabesque.png);
+  background-image: url(/pomodoro/bcgs/cartographer.png);
 
   display: flex;
   justify-content: center;
@@ -19,9 +46,12 @@ body {
 }
 .container {
   /* border: 1px solid red; */
+
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px); /* for Safari */
   min-height: 50vh;
   min-width: 50vw;
-  background-color: #ce796b;
+  /* background-color: #ce796b; */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -36,6 +66,13 @@ body {
   display: flex;
   flex-direction: column;
 }
+.task-container h2 {
+  font-family: genFont;
+}
+#task-list-container {
+  margin: 20px;
+}
+
 .task-input {
   display: flex;
 
@@ -90,5 +127,86 @@ body {
   margin: 10px;
 }
 .listDiv p {
+  font-family: bodyFont;
   margin: 10px;
+}
+/* pomodoro container styling */
+
+.pomodoro-container {
+  position: absolute;
+  z-index: 10;
+  display: flex;
+
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 350px;
+  width: 500px;
+  border-radius: 20px;
+
+  background-color: rgba(173, 168, 168, 0.336);
+}
+.timer {
+  font-size: 100px;
+  font-family: mainFont;
+  margin: 10px;
+}
+.buttons {
+  /* border: 1px solid red; */
+  width: 500px;
+  display: flex;
+  justify-content: space-evenly;
+}
+.buttons button {
+  width: 120px;
+}
+
+/* bottom container styling (theme btns etc) */
+
+body.dark-theme {
+  background-color: #1a1a1a;
+}
+
+body.dark-theme h1 {
+  color: #fff;
+  text-shadow: 0 0 10px white, 0 0 20px ;
+}
+
+body.dark-theme .mainbtn,
+body.dark-theme .sidebtn {
+  background-color: #333;
+  color: #fff;
+  border: 1px solid #555;
+}
+
+body.dark-theme #pomodoro-timer {
+  text-align: center;
+  color: #ffcccc;
+  text-shadow: 0 0 5px #ff4d4d;
+}
+
+/* Fade in/out transitions */
+.fade {
+  opacity: 0;
+  transition: opacity 1s ease;
+}
+
+.visible {
+  display: block;
+  opacity: 1;
+  transition: opacity 1s ease;
+}
+
+.hidden {
+  display: none;
+  opacity: 0;
+  transition: opacity 1s ease;
+}
+
+/* Optional: smoother body theme transition */
+body,
+#pomodoro-timer,
+button,
+h1 {
+  transition: all 1s ease;
 }
