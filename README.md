@@ -14,15 +14,15 @@
 <h2>Project Structure</h2>
 <pre>
 pomodoro/
-  |--app/
-    ├── index.html         Main HTML file
-    ├── style.css          App styling and themes
-    ├── script.js          JavaScript logic
-└── bcgs/                  Background images
-    ├── images.png         JavaScript logic
-└── fonts/                 fonts
-    ├── fonts              
-└── music/             Background audio
+  ├── index.html         Main HTML file
+  ├── style.css          App styling and themes
+  ├── script.js          JavaScript logic
+docs/
+  └── bcgs/                  Background images
+      ├── images.png         
+  └── fonts/                 fonts
+      ├── fonts              
+  └── music/             Background audio
 </pre>
 
 <h2>Planned Enhancements</h2>
